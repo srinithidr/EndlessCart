@@ -1,11 +1,10 @@
 import { serve } from "inngest/next";
-import { inngest, syncUserCreation, syncUserDeletion, syncUserUpdation } from "@/config/inngest";
+import { inngest } from "@/config/inngest";
+
+// VERY IMPORTANT FOR VERCEL + NEXT 16
+export const runtime = "nodejs";
 
 export const { GET, POST, PUT } = serve({
   client: inngest,
-  functions: [
-   syncUserCreation,
-   syncUserUpdation,
-   syncUserDeletion
-  ],
+  functions: [],
 });

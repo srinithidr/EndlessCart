@@ -2,7 +2,7 @@ import { Inngest } from "inngest";
 import connectDB from "./db";
 import User from "@/models/User";
 
-export const inngest = new Inngest({ id: "endless-next" });
+export const inngest = new Inngest({ id: "endlesscart" });
 
 // Inngest Function to save user data to a databse 
 export const syncUserCreation = inngest.createFunction(
